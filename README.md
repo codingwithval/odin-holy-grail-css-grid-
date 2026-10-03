@@ -12,31 +12,9 @@ The page is organized into five regions:
 - **Sidebar** for supporting information or secondary links
 - **Footer** for copyright or other page details
 
-On a wide screen, the navigation and sidebar sit beside the main content. On a narrow screen, the regions should rearrange into a readable single-column layout.
-
 ## CSS Grid Approach
 
-Use a grid container and named areas to describe the page structure. For example:
-
-```css
-.page {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "nav main sidebar"
-    "footer footer footer";
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 1rem;
-}
-
-header { grid-area: header; }
-nav { grid-area: nav; }
-main { grid-area: main; }
-aside { grid-area: sidebar; }
-footer { grid-area: footer; }
-```
-
-The area names connect each semantic HTML element to its place in the grid. A media query can redefine `grid-template-areas` and the columns for smaller screens.
+Use a grid container and named areas to describe the page .
 
 ## What This Project Practices
 
