@@ -1,0 +1,61 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap:15px 15px;
+    grid-template-areas:
+        "header header header header"
+        "sidebar nav nav nav"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main"
+        "footer footer footer footer";
+    
+    height: 100vh;
+}
+
+.header{
+grid-area: header;
+background-color: #006157;
+border-radius: 10px;
+}
+
+.sidebar{
+grid-area: sidebar;
+background-color: #005B94;
+border-radius: 10px;
+}
+
+.nav{
+grid-area: nav;
+background-color: #642CDE;
+border-radius: 10px;
+
+}
+
+.main{
+grid-area: main;
+background-color: #7E1DC3;
+border-radius: 10px;
+}
+.footer{
+grid-area: footer;
+background-color: #393F4D;
+border-radius: 10px;
+}
+.main img{
+    width: 50%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.header, .sidebar, .nav, .main, .footer{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    font-family:Arial, Helvetica, sans-serif
+}
